@@ -1,0 +1,123 @@
+/* Mobile */
+@media screen and (max-width: 900px) {
+    :root {
+        font-size: 26px;
+        --text-workmail-size: 0.9rem;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 900px) {
+    :root {
+        font-size: 50px;
+        --text-workmail-size: 1.15rem;
+    }
+}
+
+:root {
+    --foreground-color: #FFFFFF;
+    --background-color: #231F20;
+
+    --top-pad-size: 1.5rem;
+    --bottom-pad-size: 1.5rem;
+    --horizontal-pad-size: 1.25rem;
+
+    --vertical-pad-size-1: 0.6rem;
+    --vertical-pad-size-2: 0.9rem;
+    --icon-horizontal-pad-size: 0.6rem;
+
+    --text-title-size: 1.5rem;
+    --text-icons-size: 2rem;
+
+    --icon-horizontal-pad-size-left: var(--icon-horizontal-pad-size);
+    --icon-horizontal-pad-size-right: var(--icon-horizontal-pad-size);
+
+    --text-title-justify: center;
+    --text-workmail-justify: center;
+    --text-icons-justify: center;
+
+    --text-title-color: inherit;
+    --text-workmail-color: inherit;
+    --text-icons-color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper-page {
+    display: grid;
+    position: flex;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+}
+
+.wrapper-content {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: var(--top-pad-size) var(--horizontal-pad-size) var(--bottom-pad-size);
+}
+
+.row-title {
+    /* grid-row: 1; */
+    font-family: "Noto Serif Display";
+    font-weight: 500;
+    color: var(--text-title-color);
+    font-size: var(--text-title-size);
+    justify-self: var(--text-title-justify);
+}
+
+.vertical-pad-1 {
+    /* grid-row: 2; */
+    min-height: var(--vertical-pad-size-1);
+}
+
+.row-workmail {
+    /* grid-row: 3; */
+    font-family: "Noto Sans Mono";
+    font-weight: 100;
+    color: var(--text-workmail-color);
+    font-size: var(--text-workmail-size);
+    justify-self: var(--text-workmail-justify);
+}
+
+.vertical-pad-2 {
+    /* grid-row: 4; */
+    min-height: var(--vertical-pad-size-2);
+}
+
+.row-icons {
+    /* grid-row: 5; */
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    color: var(--text-icons-color);
+    font-size: var(--text-icons-size);
+    justify-self: var(--text-icons-justify);
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.icon-1 {
+    grid-column: 1;
+}
+
+.horizontal-pad-left {
+    grid-column: 2;
+    min-width: var(--icon-horizontal-pad-size-left);
+}
+
+.icon-2 {
+    grid-column: 3;
+}
+
+.horizontal-pad-right {
+    grid-column: 4;
+    min-width: var(--icon-horizontal-pad-size-right);
+}
+
+.icon-3 {
+    grid-column: 5;
+}
